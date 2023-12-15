@@ -1,0 +1,49 @@
+form {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	flex-direction: column;
+}
+
+.form-column {
+	display: flex;
+}
+
+input,
+textarea {
+	margin-right: 10px;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid rgb(185, 183, 183);
+	border-radius: 10px;
+	background-color: rgb(247, 244, 244);
+	margin-bottom: 10px;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="submit"] {
+	background-color: rgb(24, 31, 76);
+	color: white;
+	border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+	/* Proprietatile de CSS din media queries se scriu dupa cele normale, intrucat uneori este nevoie sa le suprascrie. */
+	.form-column {
+		flex-direction: column;
+	}
+	input,
+	textarea {
+		width: auto;
+	}
+}
+
+/* CSS de suprascriere  */
+/* CSS-ul de aici supracrie CSS-ul din style.css pt .form-column input de pe linia 111 - pentru ca este id-ul este mai prioritar decat clasa .form-column   */
+#courses-form input {
+	background-color: rgb(247, 244, 244);
+	color: black;
+}
