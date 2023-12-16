@@ -1,0 +1,28 @@
+/* Folosirea proprietatii position pentru a face header-ul sa ramana sus in pagina la scroll*/
+header {
+    position: sticky;
+    top: 0;
+}
+
+/* Position fixed pentru arrow va pozitiona elementul intr-o pozitie fixa fata de viewport*/
+.up-arrow {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Folosind proprietatile de flex aliniem central iconita de arrow atat pe orizintala cat si pe vericala */
+.up-arrow a {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(0, 135, 104);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Proprietatea 'fill' ne permite sa schimbam coloarea svg-ului */
+.up-arrow a svg {
+    fill: white;
+}
